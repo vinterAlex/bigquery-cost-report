@@ -1,0 +1,11 @@
+# Credentials & output must never be committed.
+secrets/*
+!secrets/.gitkeep
+output/
+*.tar
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/

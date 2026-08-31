@@ -1,0 +1,57 @@
+# BigQuery Cost Report (community edition) - configuration.
+#
+# The community edition is CLI-only. Most values below can be left as
+# their defaults and supplied on the command line instead.
+
+# Leave blank and pass --project on the command line.
+project_id: ""
+
+# Datasets to include. The community edition requires EXACTLY ONE
+# dataset per run (pick it with --datasets YOUR_DATASET so you scope
+# the scan to a single dataset). Whole-project / multi-dataset scanning
+# is a feature of the full (paid) edition.
+datasets: []
+
+# Lookback window in days for cost attribution.
+lookback_days: 30
+
+# Maximum jobs analysed per region within the lookback window. Raising
+# this does NOT increase BigQuery cost (the metadata view bills on bytes
+# scanned, not rows returned); it only increases the tool's own memory
+# use and runtime.
+max_jobs: 100000
+
+# BigQuery region for the metadata views (eu, us, us-central1, ...).
+# Leave empty to auto-detect from the project's datasets.
+region: ""
+
+# Hide service-account activity from the "people" view.
+human_only: false
+
+# Where results are written. Relative to this folder.
+output_dir: "output"
+
+auth:
+  # Path to the service account JSON key, relative to this folder.
+  # Leave empty to use whatever is in secrets\.
+  credentials_file: ""
+
+# Pricing. The on-demand analysis price is a flat $6.25/TiB scanned,
+# the same in the US and the EU and every region (Google's published
+# rate). Leave the default, or set a different negotiated rate here.
+pricing:
+  model: on_demand          # on_demand or capacity (slots/editions)
+  currency: USD
+  per_tib_scanned: 6.25     # flat on-demand $/TiB (US + EU + every region)
+
+safety:
+  # Hard ceiling per query, enforced by BigQuery itself.
+  max_bytes_billed_gb: 200
+
+report:
+  organisation: ""
+  prepared_by: ""
+  limits:
+    top_users: 10
+    top_datasets: 10
+    top_queries: 10
