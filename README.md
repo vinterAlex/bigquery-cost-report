@@ -158,11 +158,25 @@ and *what could surprise you next*:
 For the full edition, email **alex.vinter24@gmail.com** — same
 read-only, self-hosted, nothing-leaves-your-machine guarantees.
 
+### Get the full edition — $199 one-time
+
+[Buy BigQuery Cost Report — Full Edition](https://bigquery-cost-report.lemonsqueezy.com/checkout/buy/0d0889a9-4179-4b22-8c3f-5b4d6846ab04)
+
+Same read-only, self-hosted, nothing-leaves-your-machine — plus
+surprise-bill risk flags, storage cost, dbt attribution, daily trends
+and the no-CLI local web app. One-time license, one BigQuery project,
+instant download.
+
+For larger or enterprise purchases (escrow, invoicing), email
+**alex.vinter24@gmail.com**.
+
 ---
 
 ## Contact <a name="contact"></a>
 
 **alex.vinter24@gmail.com**
+
+Get the full edition: [Buy BigQuery Cost Report — Full Edition](https://bigquery-cost-report.lemonsqueezy.com/checkout/buy/0d0889a9-4179-4b22-8c3f-5b4d6846ab04)
 
 The full edition is the same self-hosted, read-only, no-data-leaves tool
 — with surprise-bill risk flags, storage cost, dbt attribution, daily
