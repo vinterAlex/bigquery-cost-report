@@ -1,8 +1,8 @@
-﻿# BigQuery Cost Report ΓÇö Community Edition
+# BigQuery Cost Report — Community Edition
 
 A small, **read-only** tool that tells you what is driving your Google
 BigQuery bill: who is spending the most, on which datasets/tables, and
-which queries cost the most ΓÇö and puts it in a clean PDF report.
+which queries cost the most — and puts it in a clean PDF report.
 
 Self-hosted. You run it with **your** service account key, on your own
 machine. It only reads BigQuery **metadata** (how much each thing
@@ -11,12 +11,12 @@ leaves your machine.**
 
 > This is the **community (open-source) edition**. It is the free entry
 > point. The **full edition** adds the analysis that turns the picture
-> into action ΓÇö see [the comparison](#full-edition) at the end.
+> into action — see [the comparison](#full-edition) at the end.
 >
 > **Scope:** the community edition analyses **one dataset per run**. You
 > pick a single dataset with `--datasets` (or in the one-click scripts).
 > Whole-project and multi-dataset scanning are features of the full
-> edition ΓÇö email alex.vinter24@gmail.com.
+> edition — email alex.vinter24@gmail.com.
 
 ---
 
@@ -26,15 +26,15 @@ It scans `INFORMATION_SCHEMA.JOBS_BY_PROJECT` over a lookback window and
 reports, in a PDF + JSON:
 
 - **Total** jobs, bytes billed, and estimated on-demand query cost
-  (a flat **$6.25/TiB** scanned ΓÇö same in the US and the EU and every
+  (a flat **$6.25/TiB** scanned — same in the US and the EU and every
   region).
 - **Top query spenders** (people) and **top service accounts**.
 - **Top datasets/tables** by cost, and who drives each one.
 - **Top queries** by cost (grouped, with comments/literals removed).
-- How much the scan itself cost (tiny ΓÇö metadata reads, often within
+- How much the scan itself cost (tiny — metadata reads, often within
   the 1 TiB/month free tier).
 
-It is **read-only by design** ΓÇö a safety layer rejects any statement
+It is **read-only by design** — a safety layer rejects any statement
 that is not a plain `SELECT`/`WITH`, and a per-query byte ceiling
 protects against mistakes. See `src/safety.py` for the enforcement.
 
@@ -46,9 +46,9 @@ You need:
 
 - **Docker** (or Python 3.11+ if running from source).
 - A **Google service account** that can **read** your BigQuery project
-  (`roles/bigquery.metadataViewer` ΓÇö read-only; the tool never writes).
+  (`roles/bigquery.metadataViewer` — read-only; the tool never writes).
 
-### Fastest ΓÇö the one-click script
+### Fastest — the one-click script
 
 There is a convenience script that does the build + run for you (it
 makes the `secrets`/`output` folders, builds the image, mounts them,
@@ -76,7 +76,7 @@ Before running, drop your read-only service-account key at
 > dataset** you choose (`YOUR_DATASET` above). To cover the whole
 > project or many datasets at once, see the [full edition](#full-edition).
 
-### Option A ΓÇö Docker (manual)
+### Option A — Docker (manual)
 
 ```bash
 # 1) build
@@ -95,7 +95,7 @@ The report PDF and JSON land in `./output/<project_id>/`.
 > The community edition requires exactly **one** `--datasets` value per
 > run. Omit it and the tool stops with a pointer to the full edition.
 
-### Option B ΓÇö from source
+### Option B — from source
 
 ```bash
 pip install -r requirements.txt
@@ -128,7 +128,7 @@ python src/app.py --project YOUR_PROJECT_ID --dry-run
 
 - **Analysis cost:** billed on the flat on-demand rate of **$6.25/TiB**
   scanned (US and EU and every region). Your scan reads only metadata,
-  so it is fractions of a cent ΓÇö usually under the 1 TiB/month free
+  so it is fractions of a cent — usually under the 1 TiB/month free
   tier.
 - **Safety:** the tool can only `SELECT`/`WITH` from `INFORMATION_SCHEMA`.
   It never inserts, updates, deletes or creates anything. It binds only
@@ -144,18 +144,18 @@ and *what could surprise you next*:
 
 | Feature | Community (free) | Full edition |
 |---|---|---|
-| Cost by user / dataset / query | Γ£à | Γ£à |
-| Read-only guarantee | Γ£à | Γ£à |
-| PDF report | Γ£à | Γ£à |
-| Self-hosted, nothing leaves your machine | Γ£à | Γ£à |
+| Cost by user / dataset / query | ✅ | ✅ |
+| Read-only guarantee | ✅ | ✅ |
+| PDF report | ✅ | ✅ |
+| Self-hosted, nothing leaves your machine | ✅ | ✅ |
 | **Scan scope** | **one dataset per run** | whole project, or any datasets you pick |
-| **Surprise-bill risk flags** (SELECT *, no LIMIT, missing partition filters, cross-region joins, repeated queries, zombie tables) | ΓÇö | Γ£à |
-| **Storage cost analysis** (monthly, logical vs physical) | ΓÇö | Γ£à |
-| **dbt model attribution** (which models cost the most) | ΓÇö | Γ£à |
-| **Daily trends & spike detection** (who caused the jump) | ΓÇö | Γ£à |
-| **No-CLI local web app** (pick project, run from the browser) | ΓÇö | Γ£à |
+| **Surprise-bill risk flags** (SELECT *, no LIMIT, missing partition filters, cross-region joins, repeated queries, zombie tables) | — | ✅ |
+| **Storage cost analysis** (monthly, logical vs physical) | — | ✅ |
+| **dbt model attribution** (which models cost the most) | — | ✅ |
+| **Daily trends & spike detection** (who caused the jump) | — | ✅ |
+| **No-CLI local web app** (pick project, run from the browser) | — | ✅ |
 
-For the full edition, email **alex.vinter24@gmail.com** ΓÇö same
+For the full edition, email **alex.vinter24@gmail.com** — same
 read-only, self-hosted, nothing-leaves-your-machine guarantees.
 
 ---
@@ -165,12 +165,12 @@ read-only, self-hosted, nothing-leaves-your-machine guarantees.
 **alex.vinter24@gmail.com**
 
 The full edition is the same self-hosted, read-only, no-data-leaves tool
-ΓÇö with surprise-bill risk flags, storage cost, dbt attribution, daily
+— with surprise-bill risk flags, storage cost, dbt attribution, daily
 trends and the local web app added. No subscription. One-time license.
 
 ---
 
 ## License
 
-MIT ΓÇö see [LICENSE](LICENSE). This license covers the community edition
+MIT — see [LICENSE](LICENSE). This license covers the community edition
 only; the full (paid) edition is a separate product under its own terms.
