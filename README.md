@@ -167,6 +167,10 @@ surprise-bill risk flags, storage cost, dbt attribution, daily trends
 and the no-CLI local web app. One-time license, one BigQuery project,
 instant download.
 
+Example:
+<img width="1536" height="1507" alt="cost_report" src="https://github.com/user-attachments/assets/755d480b-a515-47ff-9946-c72da3b69853" />
+
+
 For larger or enterprise purchases (escrow, invoicing), email
 **alex.vinter24@gmail.com**.
 
