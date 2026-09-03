@@ -189,6 +189,11 @@ trends and the local web app added. No subscription. One-time license.
 
 ---
 
+**Looking for a structured, visual interface?**
+👉 [Cloud Crucix Community Edition](https://github.com/vinterAlex/cloud-crucix-community)
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE). This license covers the community edition
