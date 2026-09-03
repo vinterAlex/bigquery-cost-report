@@ -9,6 +9,10 @@ machine. It only reads BigQuery **metadata** (how much each thing
 scanned and who ran what). **No table data is ever read, and nothing
 leaves your machine.**
 
+> **Prefer a visual web console over the CLI?**  
+> 👉 Check out [Cloud Crucix Community Edition](https://github.com/vinterAlex/cloud-crucix-community) for an interactive UI featuring query heatmaps, permission failure breakdowns, and live catalog pricing.
+>
+
 > This is the **community (open-source) edition**. It is the free entry
 > point. The **full edition** adds the analysis that turns the picture
 > into action — see [the comparison](#full-edition) at the end.
@@ -187,10 +191,6 @@ The full edition is the same self-hosted, read-only, no-data-leaves tool
 — with surprise-bill risk flags, storage cost, dbt attribution, daily
 trends and the local web app added. No subscription. One-time license.
 
----
-
-**Looking for a structured, visual interface?**
-👉 [Cloud Crucix Community Edition](https://github.com/vinterAlex/cloud-crucix-community)
 
 ---
 
