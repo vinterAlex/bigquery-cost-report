@@ -162,7 +162,7 @@ and *what could surprise you next*:
 For the full edition, email **alex.vinter24@gmail.com** — same
 read-only, self-hosted, nothing-leaves-your-machine guarantees.
 
-### Get the full edition — $199 one-time
+### Get the full edition — ~$100 one-time
 ### 🚨 Early-Bird Discount: Use code `LAUNCH25` for 25% off (First 10 buyers only) ⏳
 
 [Buy BigQuery Cost Report — Full Edition](https://bigquery-cost-report.lemonsqueezy.com/checkout/buy/0d0889a9-4179-4b22-8c3f-5b4d6846ab04)
