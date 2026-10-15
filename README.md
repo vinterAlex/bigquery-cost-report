@@ -10,7 +10,13 @@ Self-hosted. You run it with **your own** service account key, on **your own**
 machine. It reads BigQuery **metadata** only — how much each job scanned and who ran
 it. **No table data is ever read, and nothing leaves your machine.**
 
-📄 **[See a real (anonymised) report →](sample-report.pdf)**
+📄 **[See a sample report →](sample-report.pdf)**
+
+The sample is built from synthetic data, so nothing in it is real and it is
+safe to forward. It shows exactly the sections this Community edition produces.
+The Full edition adds the surprise-bill findings, the partitioning and
+clustering review, storage cost analysis, dbt model attribution, daily cost
+trends, and a local web app — the report itself lists them at the end.
 
 ---
 
