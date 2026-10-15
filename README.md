@@ -176,7 +176,7 @@ next*:
 
 **One-time licence, one BigQuery project, instant download. No subscription.**
 
-👉 **[Get the full edition](https://bigquery-cost-report.lemonsqueezy.com)**
+👉 **[Get the full edition](https://bigquery-cost-report.lemonsqueezy.com/checkout/buy/01660205-f913-4d17-8938-6ba242595b3c)**
 
 Same read-only, self-hosted, nothing-leaves-your-machine guarantees.
 
