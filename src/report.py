@@ -262,10 +262,10 @@ def build_report(paths, result):
     story.append(Spacer(1, 6))
     for item in [
         "Surprise-bill risk flags - eight checks covering SELECT * on "
-        "large tables, queries without LIMIT, missing partition filters, "
-        "cross-region joins, repeated queries, zombie tables, spend on "
-        "jobs that failed anyway, and large unpartitioned tables being "
-        "queried.",
+        "large tables, heavy scans with no result cap, missing partition "
+        "filters, cross-region joins, repeated queries, zombie tables, "
+        "spend on jobs that failed anyway, and large unpartitioned tables "
+        "being queried.",
         "Partitioning and clustering review - which tables are set up to "
         "let BigQuery skip data, and which are not.",
         "Storage cost analysis - what your data costs to store each "
